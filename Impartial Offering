@@ -1,0 +1,21 @@
+n = int(input())
+for i in range(0,n):
+    nd = int(input())
+    a = []
+    a = [int(i) for i in input().split()]
+
+    a.sort()
+    aset = sorted(set(a))
+    p=0
+
+    ac = []
+    for k in aset:
+        ac.append([k, a.count(k)])
+    acl = len(ac)
+    s = 0
+    for k in range(0,acl):
+
+      s = s + (k+1)*ac[k][1]
+    print("Case #",end='')
+    print(i+1,end='')
+    print(":",s)
